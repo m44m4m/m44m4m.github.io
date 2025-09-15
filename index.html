@@ -1,74 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Mohamad @m44m4m </title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>M44M4M</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #000000, #1a1a1a, #2e2e2e);
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    :root{
+      --bg:#000000;
+      --fg:#ffffff;
+      --accent1:#ff4d6d; /* pink */
+      --accent2:#6df0ff; /* cyan */
+      --accent3:#ffd36d; /* amber */
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background: var(--bg);
+      color:var(--fg);
+      font-family: 'Inter', system-ui, sans-serif;
+      display:flex;
       flex-direction: column;
-      height: 100vh;
-      text-align: center;
+      justify-content: space-between;
+      overflow:hidden;
     }
 
-    h1 {
-      font-size: 2.5rem;
-      text-transform: none;
-      letter-spacing: 1px;
-      text-shadow: 0 0 10px #fff, 0 0 20px #0ff, 0 0 40px #0ff;
-      margin-bottom: 20px;
-      line-height: 1.5;
+    .center-content {
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      flex:1;
+      text-align:center;
+      padding:20px;
     }
 
-    p {
-      font-size: 1.2rem;
-      color: #ccc;
-      text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
-      margin-bottom: 40px;
+    .headline{
+      position:relative;
+      font-weight:900;
+      font-family:'JetBrains Mono', monospace;
+      font-size:clamp(24px, 5vw, 42px);
+      user-select:none;
+      display:inline-block;
+      padding:0 6px;
+      line-height:1.5;
+    }
+
+    .headline .base{
+      color:var(--fg);
+      text-shadow:0 0 15px rgba(255,255,255,0.6);
+    }
+
+    .glitch-layer{
+      position:absolute;
+      top:0;left:0;right:0;bottom:0;
+      mix-blend-mode:screen;
+      pointer-events:none;
+    }
+    .glitch-layer--1{ color:var(--accent1) }
+    .glitch-layer--2{ color:var(--accent2) }
+    .glitch-layer--3{ color:var(--accent3) }
+
+    .subtitle{
+      margin-top:20px;
+      font-size:1rem;
+      color:#bbb;
+      text-shadow:0 0 5px rgba(255,255,255,0.3);
     }
 
     .contact {
-      margin-top: auto;
-      padding: 20px;
-      background: rgba(255, 255, 255, 0.05);
-      width: 100%;
-      text-align: center;
+      padding:20px;
+      background:rgba(255,255,255,0.05);
+      text-align:center;
     }
 
     .contact h2 {
-      margin-bottom: 15px;
-      font-size: 1.2rem;
-      color: #fff;
-      text-shadow: 0 0 5px #0ff;
+      font-size:1.1rem;
+      margin-bottom:10px;
+      text-shadow:0 0 5px #0ff;
     }
 
     .social-icons a {
-      color: #fff;
-      margin: 0 15px;
-      font-size: 1.5rem;
-      text-decoration: none;
-      transition: 0.3s;
+      color:#fff;
+      margin:0 12px;
+      font-size:1.5rem;
+      transition:0.3s;
     }
 
     .social-icons a:hover {
-      color: #0ff;
-      text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+      color:#0ff;
+      text-shadow:0 0 10px #0ff, 0 0 20px #0ff;
+    }
+
+    /* glitch animations */
+    .glitch-active .glitch-layer--1{ animation:glitch1 420ms steps(2,end) infinite }
+    .glitch-active .glitch-layer--2{ animation:glitch2 360ms steps(2,end) infinite }
+    .glitch-active .glitch-layer--3{ animation:glitch3 300ms steps(2,end) infinite }
+
+    @keyframes glitch1{
+      0%{ transform:translate(-2px,-2px) }
+      25%{ transform:translate(8px,2px) }
+      50%{ transform:translate(-6px,-1px) }
+      75%{ transform:translate(10px,4px) }
+      100%{ transform:translate(-2px,-2px) }
+    }
+    @keyframes glitch2{
+      0%{ transform:translate(2px,1px) }
+      20%{ transform:translate(-8px,-4px) }
+      50%{ transform:translate(6px,3px) }
+      80%{ transform:translate(-12px,-6px) }
+      100%{ transform:translate(2px,1px) }
+    }
+    @keyframes glitch3{
+      0%{ transform:translate(0,0) }
+      30%{ transform:translate(12px,-3px) }
+      60%{ transform:translate(-10px,4px) }
+      100%{ transform:translate(0,0) }
     }
   </style>
 </head>
 <body>
-  <div>
-    <h1>Hello, I am Mohamad<br>and I am an Engineer under construction.<br>By the way, this site is also under development.</h1>
-    <p>Stay tuned for the official launch. Great things are coming soon ✨</p>
+  <div class="center-content">
+    <h1 class="headline">
+      <span class="base">Hello, I am Mohamad and I am an Engineer under construction.<br>By the way, this site is also under development.</span>
+      <span class="glitch-layer glitch-layer--1" aria-hidden="true">Hello, I am Mohamad and I am an Engineer under construction.<br>By the way, this site is also under development.</span>
+      <span class="glitch-layer glitch-layer--2" aria-hidden="true">Hello, I am Mohamad and I am an Engineer under construction.<br>By the way, this site is also under development.</span>
+      <span class="glitch-layer glitch-layer--3" aria-hidden="true">Hello, I am Mohamad and I am an Engineer under construction.<br>By the way, this site is also under development.</span>
+    </h1>
+    <p class="subtitle">Stay tuned for the launch — amazing things are coming soon ✨</p>
   </div>
 
   <div class="contact">
@@ -81,5 +145,13 @@
       <a href="mailto:info@m44m4m.com"><i class="fas fa-envelope"></i></a>
     </div>
   </div>
+
+  <script>
+    const headline = document.querySelector('.headline');
+    headline.addEventListener('mouseenter', () => document.documentElement.classList.add('glitch-active'));
+    headline.addEventListener('mouseleave', () => document.documentElement.classList.remove('glitch-active'));
+    headline.addEventListener('touchstart', () => document.documentElement.classList.add('glitch-active'));
+    headline.addEventListener('touchend', () => document.documentElement.classList.remove('glitch-active'));
+  </script>
 </body>
 </html>
