@@ -1,137 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>M44M4M</title>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mohamad | Engineer</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
   <style>
-    :root{
-      --bg:#000000;
-      --fg:#ffffff;
-      --accent1:#ff4d6d;
-      --accent2:#6df0ff;
-      --accent3:#ffd36d;
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #000000, #111111, #1a1a1a);
+      font-family: Arial, sans-serif;
+      color: #fff;
+      text-align: center;
     }
-
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      background: var(--bg);
-      color:var(--fg);
-      font-family: 'Inter', system-ui, sans-serif;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
-      padding:20px;
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
     }
-
-    .headline{
-      position:relative;
-      font-weight:700;
-      font-size:clamp(20px, 4vw, 32px);
-      line-height:1.6;
-      user-select:none;
-      display:inline-block;
+    p {
+      font-size: 1.2rem;
+      margin: 5px 0;
+      opacity: 0.9;
     }
-
-    .headline .base{
-      color:var(--fg);
-      text-shadow:0 0 12px rgba(255,255,255,0.6);
-      white-space:pre-line;
+    .socials {
+      margin-top: 30px;
+      display: flex;
+      gap: 20px;
     }
-
-    .glitch-layer{
-      position:absolute;
-      top:0;left:0;right:0;bottom:0;
-      mix-blend-mode:screen;
-      pointer-events:none;
-      white-space:pre-line;
+    .socials a {
+      color: #fff;
+      font-size: 1.8rem;
+      text-decoration: none;
+      transition: color 0.3s;
     }
-    .glitch-layer--1{ color:var(--accent1) }
-    .glitch-layer--2{ color:var(--accent2) }
-    .glitch-layer--3{ color:var(--accent3) }
-
-    .social-icons {
-      margin-top:25px;
-    }
-
-    .social-icons a {
-      color:#fff;
-      margin:0 10px;
-      font-size:1.6rem;
-      transition:0.3s;
-    }
-
-    .social-icons a:hover {
-      color:#0ff;
-      text-shadow:0 0 10px #0ff, 0 0 20px #0ff;
-    }
-
-    /* glitch animations */
-    .glitch-active .glitch-layer--1{ animation:glitch1 420ms steps(2,end) infinite }
-    .glitch-active .glitch-layer--2{ animation:glitch2 360ms steps(2,end) infinite }
-    .glitch-active .glitch-layer--3{ animation:glitch3 300ms steps(2,end) infinite }
-
-    @keyframes glitch1{
-      0%{ transform:translate(-2px,-2px) }
-      25%{ transform:translate(8px,2px) }
-      50%{ transform:translate(-6px,-1px) }
-      75%{ transform:translate(10px,4px) }
-      100%{ transform:translate(-2px,-2px) }
-    }
-    @keyframes glitch2{
-      0%{ transform:translate(2px,1px) }
-      20%{ transform:translate(-8px,-4px) }
-      50%{ transform:translate(6px,3px) }
-      80%{ transform:translate(-12px,-6px) }
-      100%{ transform:translate(2px,1px) }
-    }
-    @keyframes glitch3{
-      0%{ transform:translate(0,0) }
-      30%{ transform:translate(12px,-3px) }
-      60%{ transform:translate(-10px,4px) }
-      100%{ transform:translate(0,0) }
+    .socials a:hover {
+      color: #ff0099;
     }
   </style>
 </head>
 <body>
-  <div>
-    <h1 class="headline">
-      <span class="base">Hello, I am Mohamad,
-I am an Engineer under construction.
-By the way, this site is also under development.</span>
-      <span class="glitch-layer glitch-layer--1" aria-hidden="true">Hello, I am Mohamad,
-I am an Engineer under construction.
-By the way, this site is also under development.</span>
-      <span class="glitch-layer glitch-layer--2" aria-hidden="true">Hello, I am Mohamad,
-I am an Engineer under construction.
-By the way, this site is also under development.</span>
-      <span class="glitch-layer glitch-layer--3" aria-hidden="true">Hello, I am Mohamad,
-I am an Engineer under construction.
-By the way, this site is also under development.</span>
-    </h1>
+  <h1>Hello, I am Mohamad,</h1>
+  <p>I am an Engineer under construction.</p>
+  <p>By the way, this site is also under development.</p>
 
-    <div class="social-icons">
-      <a href="https://www.linkedin.com" m44m4m="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="https://www.facebook.com" m44m4m="_blank"><i class="fab fa-facebook"></i></a>
-      <a href="https://www.instagram.com" m44m4m="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.snapchat.com" m44m4m="_blank"><i class="fab fa-snapchat"></i></a>
-      <a href="mailto:contact@m44m4m.com"><i class="fas fa-envelope"></i></a>
-    </div>
+  <div class="socials">
+    <a href="https://linkedin.com/in/m44m4m" target="_blank"><i class="ri-linkedin-fill"></i></a>
+    <a href="https://facebook.com/m44m4m" target="_blank"><i class="ri-facebook-fill"></i></a>
+    <a href="https://instagram.com/m44m4m" target="_blank"><i class="ri-instagram-fill"></i></a>
+    <a href="https://snapchat.com/add/m44m4m" target="_blank"><i class="ri-snapchat-fill"></i></a>
+    <a href="mailto:m44m4m@example.com"><i class="ri-mail-fill"></i></a>
   </div>
-
-  <script>
-    const headline = document.querySelector('.headline');
-    headline.addEventListener('mouseenter', () => document.documentElement.classList.add('glitch-active'));
-    headline.addEventListener('mouseleave', () => document.documentElement.classList.remove('glitch-active'));
-    headline.addEventListener('touchstart', () => document.documentElement.classList.add('glitch-active'));
-    headline.addEventListener('touchend', () => document.documentElement.classList.remove('glitch-active'));
-  </script>
 </body>
 </html>
