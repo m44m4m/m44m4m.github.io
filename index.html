@@ -5,16 +5,16 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>M44M4M</title>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
     :root{
       --bg:#000000;
       --fg:#ffffff;
-      --accent1:#ff4d6d; /* pink */
-      --accent2:#6df0ff; /* cyan */
-      --accent3:#ffd36d; /* amber */
+      --accent1:#ff4d6d;
+      --accent2:#6df0ff;
+      --accent3:#ffd36d;
     }
 
     *{box-sizing:border-box}
@@ -25,35 +25,25 @@
       color:var(--fg);
       font-family: 'Inter', system-ui, sans-serif;
       display:flex;
-      flex-direction: column;
-      justify-content: space-between;
-      overflow:hidden;
-    }
-
-    .center-content {
-      display:flex;
-      flex-direction:column;
       align-items:center;
       justify-content:center;
-      flex:1;
       text-align:center;
       padding:20px;
     }
 
     .headline{
       position:relative;
-      font-weight:900;
-      font-family:'JetBrains Mono', monospace;
-      font-size:clamp(24px, 5vw, 42px);
+      font-weight:700;
+      font-size:clamp(20px, 4vw, 32px);
+      line-height:1.6;
       user-select:none;
       display:inline-block;
-      padding:0 6px;
-      line-height:1.5;
     }
 
     .headline .base{
       color:var(--fg);
-      text-shadow:0 0 15px rgba(255,255,255,0.6);
+      text-shadow:0 0 12px rgba(255,255,255,0.6);
+      white-space:pre-line;
     }
 
     .glitch-layer{
@@ -61,34 +51,20 @@
       top:0;left:0;right:0;bottom:0;
       mix-blend-mode:screen;
       pointer-events:none;
+      white-space:pre-line;
     }
     .glitch-layer--1{ color:var(--accent1) }
     .glitch-layer--2{ color:var(--accent2) }
     .glitch-layer--3{ color:var(--accent3) }
 
-    .subtitle{
-      margin-top:20px;
-      font-size:1rem;
-      color:#bbb;
-      text-shadow:0 0 5px rgba(255,255,255,0.3);
-    }
-
-    .contact {
-      padding:20px;
-      background:rgba(255,255,255,0.05);
-      text-align:center;
-    }
-
-    .contact h2 {
-      font-size:1.1rem;
-      margin-bottom:10px;
-      text-shadow:0 0 5px #0ff;
+    .social-icons {
+      margin-top:25px;
     }
 
     .social-icons a {
       color:#fff;
-      margin:0 12px;
-      font-size:1.5rem;
+      margin:0 10px;
+      font-size:1.6rem;
       transition:0.3s;
     }
 
@@ -125,24 +101,28 @@
   </style>
 </head>
 <body>
-  <div class="center-content">
+  <div>
     <h1 class="headline">
-      <span class="base">Hello, I am Mohamad and I am an Engineer under construction.<br>By the way, this site is also under development.</span>
-      <span class="glitch-layer glitch-layer--1" aria-hidden="true">Hello, I am Mohamad and I am an Engineer under construction.<br>By the way, this site is also under development.</span>
-      <span class="glitch-layer glitch-layer--2" aria-hidden="true">Hello, I am Mohamad and I am an Engineer under construction.<br>By the way, this site is also under development.</span>
-      <span class="glitch-layer glitch-layer--3" aria-hidden="true">Hello, I am Mohamad and I am an Engineer under construction.<br>By the way, this site is also under development.</span>
+      <span class="base">Hello, I am Mohamad,
+I am an Engineer under construction.
+By the way, this site is also under development.</span>
+      <span class="glitch-layer glitch-layer--1" aria-hidden="true">Hello, I am Mohamad,
+I am an Engineer under construction.
+By the way, this site is also under development.</span>
+      <span class="glitch-layer glitch-layer--2" aria-hidden="true">Hello, I am Mohamad,
+I am an Engineer under construction.
+By the way, this site is also under development.</span>
+      <span class="glitch-layer glitch-layer--3" aria-hidden="true">Hello, I am Mohamad,
+I am an Engineer under construction.
+By the way, this site is also under development.</span>
     </h1>
-    <p class="subtitle">Stay tuned for the launch — amazing things are coming soon ✨</p>
-  </div>
 
-  <div class="contact">
-    <h2>Find me on</h2>
     <div class="social-icons">
-      <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
-      <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.snapchat.com" target="_blank"><i class="fab fa-snapchat"></i></a>
-      <a href="mailto:info@m44m4m.com"><i class="fas fa-envelope"></i></a>
+      <a href="https://www.linkedin.com" m44m4m="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.facebook.com" m44m4m="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.instagram.com" m44m4m="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.snapchat.com" m44m4m="_blank"><i class="fab fa-snapchat"></i></a>
+      <a href="mailto:contact@m44m4m.com"><i class="fas fa-envelope"></i></a>
     </div>
   </div>
 
